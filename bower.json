@@ -1,0 +1,21 @@
+{
+  "name": "txt2seq2png",
+  "version": "0.0.0",
+  "authors": [
+    "Mitsui"
+  ],
+  "main": "./src/index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "js-sequence-diagrams": "bramp/js-sequence-diagrams#^1.0.6",
+    "autosize": "~3.0.8",
+    "matchHeight": "~0.6.0"
+  }
+}

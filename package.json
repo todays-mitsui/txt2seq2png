@@ -1,0 +1,16 @@
+{
+  "name": "txt2seq2png",
+  "description": "save svg to png image, rendered by js-seqence-diagram.",
+  "author": "Mitsui",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-bower-files": "~0.2.7",
+    "gulp-concat": "~2.6.0",
+    "gulp-csscomb": "~3.0.6",
+    "gulp-filter": "~2.0.2",
+    "gulp-pleeease": "~1.2.0",
+    "gulp-ruby-sass": "~1.0.5",
+    "gulp-uglify": "~1.2.0",
+    "main-bower-files": "~2.9.0"
+  }
+}

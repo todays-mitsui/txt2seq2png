@@ -1,0 +1,125 @@
+@import "_reset";
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro|Ranga);
+
+@import "_variables";
+@import "_path";
+@import "_core";
+@import "_icons";
+
+
+body {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+#src {
+  width: 100%;
+  padding: .4em;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 3px;
+  border-color: #ddd;
+	outline: none;
+  box-sizing: border-box;
+	resize: vertical !important;
+}
+
+#diagram {
+  text-align: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  svg { background-color: #fff; }
+  rect { background-color: #fff; }
+}
+
+.header {
+  position: relative;
+  margin: 30px 0 16px;
+  padding: 8px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+
+  h1 {
+    $h: 86px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1000;
+    margin-top: -.5 * $h;
+    color: #047ac6;
+    font-family: 'Ranga', cursive;
+    font-size: $h;
+    line-height: $h;
+    letter-spacing: .01em;
+    text-shadow: 0 0 3px rgba(4, 122, 198, .4);
+  }
+}
+
+.render-btns {
+  float: right;
+
+  li {
+    display: inline-block;
+    margin-left: 3px;
+    padding: 10px 18px;
+    color: #047ac6;
+    font-size: 14px;
+    border: 1px rgba(4, 122, 198, .1) solid;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all ease 200ms;
+
+    &:hover {
+      border-color: rgba(4, 122, 198, 1);
+    }
+  }
+}
+
+.column {
+  &.l {
+    float: left;
+    width: 40%;
+  }
+  &.r {
+    float: right;
+    width: 60%;
+  }
+}
+
+.main {
+  margin: 20px;
+	padding: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+
+  .l & { margin-right: 10px; }
+  .r & { margin-left: 10px; }
+}
+
+.footer {
+  margin: 30px 0;
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 14px;
+  font-style:  normal;
+  text-align:  center;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}

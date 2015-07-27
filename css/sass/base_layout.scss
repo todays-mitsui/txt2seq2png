@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@import "lib/_util";
+@import "lib/_gallery";
+@import "lib/_arrow";
+@import "lib/_color";
+@import "lib/_fonts";
+
+
+/*** Header ***/
+
+.header {
+}
+
+
+/*** Footer ***/
+
+.footer {
+}
+
+
+/*** Fixed Footer ***/
+
+.fixed_footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2000;
+  width: 100%;
+}
+
+
