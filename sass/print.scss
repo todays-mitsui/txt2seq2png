@@ -2,7 +2,7 @@ body {
   background: none;
 }
 
-.header, .column.l, .footer {
+.header, .column.l, .footer, #about {
   display: none;
 }
 
@@ -24,4 +24,5 @@ body {
 
 #diagram {
   text-align: left;
+  overflow: visible;
 }
