@@ -4,6 +4,8 @@ var $main    = $('.main');
 var $src     = $('#src');
 var $diagram = $('#diagram');
 
+var pngfilename = "sequence_dialog.png";
+
 function render(ev) {
   try {
     var previousSvg = $diagram.html();
@@ -36,7 +38,7 @@ function savePng(ev) {
   image.onload = function() {
     ctx.drawImage(image, 0, 0);
 
-    var $a = $('<a id="t2s2p-a" type="application/octet-stream" href="'+ $canvas[0].toDataURL('image/png') + '" download="seq.png">_</a>');
+    var $a = $('<a id="t2s2p-a" type="application/octet-stream" href="'+ $canvas[0].toDataURL('image/png') + '" download="' + pngfilename + '">_</a>');
     $body.append($a);
     $a[0].click();
 
@@ -52,6 +54,12 @@ render();
 
 autosize($src);
 
-$('#save-png').on('click', savePng);
-$('#save-pdf').on('click', function(ev) { print(); });
+$('#save-png').on('click', function(ev) {
+  ga('send', 'pageview', {'page', '/save/png'});
+  savePng(ev);
+});
+$('#save-pdf').on('click', function(ev) {
+  ga('send', 'pageview', {'page', '/save/pdf'});
+  print();
+});
 })();
