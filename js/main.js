@@ -55,11 +55,11 @@ render();
 autosize($src);
 
 $('#save-png').on('click', function(ev) {
-  ga('send', 'pageview', {'page', '/save/png'});
+  ga('send', 'pageview', '/save/png');
   savePng(ev);
 });
 $('#save-pdf').on('click', function(ev) {
-  ga('send', 'pageview', {'page', '/save/pdf'});
+  ga('send', 'pageview', '/save/pdf');
   print();
 });
 })();
