@@ -11,6 +11,7 @@
     "gulp-pleeease": "~1.2.0",
     "gulp-ruby-sass": "~1.0.5",
     "gulp-uglify": "~1.2.0",
-    "main-bower-files": "~2.9.0"
+    "main-bower-files": "~2.9.0",
+    "gulp-plumber": "~1.0.1"
   }
 }
