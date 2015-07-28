@@ -36,7 +36,7 @@ function savePng(ev) {
   image.onload = function() {
     ctx.drawImage(image, 0, 0);
 
-    var $a = $('<a id="t2s2p-a" type="application/octet-stream" href="'+ canvas.toDataURL('image/png') + '" download="seq.png">_</a>');
+    var $a = $('<a id="t2s2p-a" type="application/octet-stream" href="'+ $canvas[0].toDataURL('image/png') + '" download="seq.png">_</a>');
     $body.append($a);
     $a[0].click();
 
