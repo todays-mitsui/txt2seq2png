@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import "_reset";
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro|Ranga);
 
@@ -6,10 +8,18 @@
 @import "_core";
 @import "_icons";
 
+html {
+  width: 100%;
+  height: 100%;
+}
 
 body {
+  position: relative;
+  min-height: 100%;
+  padding: 1px 0;
   background-color: #f0f0f0;
   color: #222;
+  font-family: verdana, helvetica, arial, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
 }
 
 #src {
@@ -64,17 +74,27 @@ body {
     display: inline-block;
     margin-left: 3px;
     padding: 10px 18px;
-    color: #047ac6;
+    color: #dc8413;
     font-size: 14px;
-    border: 1px rgba(4, 122, 198, .1) solid;
+    line-height: 1;
+    border: 1px rgba(220, 132, 19, .1) solid;
     border-radius: 3px;
     cursor: pointer;
     transition: all ease 200ms;
 
     &:hover {
-      border-color: rgba(4, 122, 198, 1);
+      border-color: rgba(220, 132, 19, 1);
     }
   }
+}
+
+.about {
+  margin-right: 20px;
+  padding: 11px;
+  float: right;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .column {
@@ -109,6 +129,80 @@ body {
   font-size: 14px;
   font-style:  normal;
   text-align:  center;
+}
+
+#about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  &:target {
+    display: block;
+  }
+
+  .back-layer {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .dialog {
+    $w: 600px;
+    $h: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2500;
+    width: $w;
+    height: $h;
+    margin-top: -.5*$h;
+    margin-left: -.5*$w;
+    padding: 40px 60px;
+    border-radius: 5px;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, .3);
+    box-sizing: border-box;
+
+    color: #333;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .logo {
+    font-family: 'Ranga', cursive;
+    font-size: 2em;
+  }
+  p {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.8;
+    word-break: break-all;
+    &:last-child { margin-bottom: 0; }
+  }
+  em {
+    font-style: normal;
+    font-weight: bold;
+  }
+}
+
+a {
+  $c: #047ac6;
+  color: $c;
+  text-decoration: none;
+  border-bottom: 1px $c dotted;
+  &:hover { border-bottom: none; }
+  &:active { border-bottom: 1px $c dotted; }
+}
+
+.center {
+  text-align: center;
 }
 
 .hidden {

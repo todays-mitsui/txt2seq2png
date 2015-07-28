@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="&quot;JS Sequence Diagrams&quot;で生成されたシーケンス図を簡単にPNGやPDFとして保存することができます。">
+<meta name="description" content="&quot;js-sequence-diagrams&quot;で生成されたシーケンス図を簡単にPNGやPDFとして保存することができます。">
 <title>txt2seq2png</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/print.css" media="print">
@@ -24,6 +24,7 @@
     <li id="save-png"><i class="fa fa-picture-o fa-1"></i> PNGで保存</li>
     <li id="save-pdf" title="印刷ダイアログが開きます。&#x0A;「PDFに保存」を送信先に選んで保存してください。"><i class="fa fa-file-pdf-o fa-1"></i> PDFで保存</li>
   </ul><!-- /.render-btns -->
+  <p class="about"><a href="#about">このサイトについて</a></p>
 </header><!-- /.header -->
 
 <div class="container clearfix">
@@ -46,6 +47,20 @@ D-->>A: Dashed open arrow</textarea>
   <address class="copyright">&copy; 2015 Mitsui.</address>
 </footer><!-- /.footer -->
 
+<div id="about">
+  <a class="back-layer" href="#"></a>
+  <article class="dialog">
+    <h1><span class="logo">txt2seq2png</span> について</h1>
+    <p>
+      このサイトは、<em>js-sequence-diagrams</em>を使ってレンダリングしたシーケンス図を手軽にPNG保存するために三井によって制作されました。<br>
+      シーケンス図の書式などについては<a href="https://bramp.github.io/js-sequence-diagrams/" target="_blank">公式サイト</a>を参照してください。
+    </p>
+    <p class="center"><a href="https://github.com/todays-mitsui/txt2seq2png" target="_blank">Repository</a></p>
+    <p class="center"><a class="github-button" href="https://github.com/todays-mitsui/txt2seq2png" data-style="mega" aria-label="Watch todays-mitsui/txt2seq2png on GitHub">Watch　on GitHub</a></p>
+  </article>
+</div><!-- /#about -->
+
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 <script src="js/init.js"></script>
 <script src="js/main.js"></script>
 </body>
